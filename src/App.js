@@ -17,11 +17,9 @@ function App() {
       <Router>
         <div className="App">
           <Navigation />
+          <div className={"MainContainer"}>
           <Switch>
-            <Route path="/">
-              <Home date={date}/>
-            </Route>
-            <Route path="/home">
+            <Route exact path="/">
               <Home date={date}/>
             </Route>
             <Route path="/contact">
@@ -31,6 +29,7 @@ function App() {
               <Signup />
             </Route>
           </Switch>
+          </div>
           <Footer />
         </div>
       </Router>
@@ -38,7 +37,9 @@ function App() {
 }
 function Navigation() {
   return <nav className={"Navigation"}>
-    test
+    <Link className={"Link"} to={"/"}>Home</Link>
+    <Link className={"Link"} to={"/signup"}>Signup</Link>
+    <Link className={"Link"} to={"/contact"}>Contact</Link>
   </nav>
 }
 
@@ -50,7 +51,7 @@ function Signup() {
 }
 
 function Footer() {
-  return <div>
+  return <div className={"Footer"}>
     <img className={"Logo"} src={"https://www.inkubio.fi/wp-content/themes/suurinkubio/assets/images/inkulogo-viher.svg"} />
   </div>
 }

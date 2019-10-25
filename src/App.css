@@ -1,20 +1,37 @@
 .App {
     background: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     width: 100vw;
     height: 100vh;
     font-family: 'Open Sans', sans-serif;
 }
+.MainContainer {
+    height: 80%;
+    width: 100%;
+}
 .Footer {
-    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 .Navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5%;
     padding: 0px;
     margin: 0px;
 }
 .Logo {
-    height: 100%;
-    width: 100%;
-    padding: 20px;
-    alignment: center;
-    height: 60px;
+    height: 70px;
+}
+.Link {
+    margin: 0px 10px 0px 10px;
+}
+a {
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
 }
