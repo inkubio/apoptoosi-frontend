@@ -1,0 +1,125 @@
+.Container {
+    width: 100%;
+    height: 80%;
+}
+.Grid {
+    margin: 2% 0px;
+    padding: 0px 2%;
+    height: 100%;
+    display: grid;
+    grid-gap: 1%;
+    grid-template-columns: auto auto auto auto;
+}
+.BaseItem {
+    position: relative;
+    text-align: center;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+}
+.Item-1 {
+    background: #0C9207;
+}
+.Item-2 {
+    background: #5CA1D9;
+}
+.Item-3 {
+    background: #e53935;
+}
+.Item-4 {
+    background: #06A4B8;
+}
+.TitleCard {
+    position: absolute;
+    background: white;
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.5);
+    width: 40vw;
+    height: 20vh;
+    top: calc(45% - 10vh);
+    left: calc(50% - 20vw);
+}
+.Title {
+    margin-top: 45px;
+    margin-bottom: 10px;
+    font-size: 2.5em;
+    text-align: center;
+}
+.Item1-Triangle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #078103;
+    clip-path: polygon(0 25%, 0% 100%, 100% 100%);
+}
+.Item1-Rect {
+    position: absolute;
+    width: 100%;
+    height: 55%;
+    bottom: 0;
+    background: #059C00;
+}
+.Item2-TopRect {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #79C1FB;
+    clip-path: polygon(0 0, 100% 0, 100% 35%, 0 25%);
+}
+.Item2-MidRect {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #6EB6F0;
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 0 80%);
+}
+.Item3-TopRect {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #d32f2f;
+    clip-path: polygon(0 0, 100% 0, 100% 35%, 0 25%);
+}
+.Item3-BottomRect {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #f44336;
+    clip-path: polygon(0 65%, 100% 75%, 100% 100%, 0 100%);
+}
+.Item4-LeftRect {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #06B4B8;
+    clip-path: polygon(0 0, 45% 0, 15% 100%, 0 100%);
+}
+.Item4-RightRect {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #1D91AF;
+    clip-path: polygon(85% 0, 100% 0, 100% 100%, 55% 100%);
+}
+.Timer {
+    text-align: center;
+    width: 100%;
+    font-size: 1.2em;
+}
+
+@media (max-width: 599px) {
+    .Grid {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto;
+    }
+    .Title {
+        font-size: 2.2em;
+    }
+    .TitleCard {
+        width: 60vw;
+        height: 25vh;
+        top: calc(45% - 12.5vh);
+        left: calc(50% - 30vw);
+    }
+    .Timer {
+        font-size: 1em;
+    }
+}
