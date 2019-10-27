@@ -38,7 +38,7 @@ function App() {
 function Navigation() {
   return <nav className={"Navigation"}>
     <Link className={"Link"} to={"/"}>Home</Link>
-    <Link className={"Link"} to={"/signup"}>Signup</Link>
+    <Link className={"Link Signup"} to={"/signup"}>Signup</Link>
     <Link className={"Link"} to={"/contact"}>Contact</Link>
   </nav>
 }
