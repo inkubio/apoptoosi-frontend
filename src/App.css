@@ -31,8 +31,8 @@
     margin: 0px 10px 0px 10px;
 }
 a {
-    color: inherit; /* blue colors for links too */
-    text-decoration: inherit; /* no underline */
+    color: inherit;
+    text-decoration: inherit;
 }
 .Signup {
     display: none;
