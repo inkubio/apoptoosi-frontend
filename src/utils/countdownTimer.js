@@ -9,9 +9,10 @@ function CountDownTimer(props) {
     const one_minute = 1000*60;
     const one_second = 1000;
     useEffect(() => {
-       setInterval(() => {
+       const interval = setInterval(() => {
            setTimeUntil(props.date.getTime()-Date.now());
        },1000);
+       return () => clearInterval(interval);
     });
     let days = Math.floor(timeUntil/one_day);
     let hours = Math.floor((timeUntil-days*one_day)/one_hour);
