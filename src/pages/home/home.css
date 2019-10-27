@@ -54,9 +54,9 @@
 .Item1-Rect {
     position: absolute;
     width: 100%;
-    height: 55%;
-    bottom: 0;
+    height: 100%;
     background: #059C00;
+    clip-path: polygon(0 60%, 100% 35%, 100% 100%, 0% 100%);
 }
 .Item2-TopRect {
     position: absolute;
