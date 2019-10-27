@@ -13,7 +13,7 @@ function Home(props) {
         </div>
         <div className={"TitleCard"}>
             <h1 className={"Title"}>Apoptoosi XVI</h1>
-            <CountDownTimer className={"Timer"} date={props.date} />
+            <CountDownTimer className={"Timer"} date={props.date}/>
         </div>
     </div>
 }
@@ -24,6 +24,7 @@ function Item1() {
         <div className={"Item1-Triangle"}/>
     </div>
 }
+
 function Item2() {
     return <div className={"BaseItem Item-2"}>
         <div className={"Item2-MidRect"}/>
@@ -31,16 +32,19 @@ function Item2() {
     </div>
 
 }
+
 function Item3() {
     return <div className={"BaseItem Item-3"}>
         <div className={"Item3-TopRect"}/>
         <div className={"Item3-BottomRect"}/>
     </div>
 }
+
 function Item4() {
     return <div className={"BaseItem Item-4"}>
         <div className={"Item4-LeftRect"}/>
         <div className={"Item4-RightRect"}/>
     </div>
 }
+
 export default Home;

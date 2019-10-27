@@ -6,16 +6,19 @@
     height: 100vh;
     font-family: 'Open Sans', sans-serif;
 }
+
 .MainContainer {
     height: 80%;
     width: 100%;
 }
+
 .Footer {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
 }
+
 .Navigation {
     display: flex;
     justify-content: center;
@@ -24,16 +27,20 @@
     padding: 0px;
     margin: 0px;
 }
+
 .Logo {
     height: 70px;
 }
+
 .Link {
     margin: 0px 10px 0px 10px;
 }
+
 a {
     color: inherit;
     text-decoration: inherit;
 }
+
 .Signup {
     display: none;
 }
