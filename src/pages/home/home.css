@@ -116,6 +116,12 @@
     background: #1D91AF;
     clip-path: polygon(85% 0, 100% 0, 100% 100%, 55% 100%);
 }
+.Date {
+    font-size: 1.3em;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+}
 
 .Timer {
     text-align: center;
@@ -143,5 +149,8 @@
 
     .Timer {
         font-size: 1em;
+    }
+    .Date {
+        font-size: 1.1em;
     }
 }

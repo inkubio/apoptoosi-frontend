@@ -3,7 +3,7 @@ import CountDownTimer from "../../utils/countdownTimer";
 import "./home.css"
 
 
-function Home(props) {
+function Home({date}) {
     return <div className={"Container"}>
         <div className={"Grid"}>
             <Item1/>
@@ -13,7 +13,8 @@ function Home(props) {
         </div>
         <div className={"TitleCard"}>
             <h1 className={"Title"}>Apoptoosi XVI</h1>
-            <CountDownTimer className={"Timer"} date={props.date}/>
+            <p className={"Date"}>{date.toLocaleString()}</p>
+            <CountDownTimer className={"Timer"} date={date}/>
         </div>
     </div>
 }
