@@ -2,6 +2,11 @@ import React from 'react';
 import CountDownTimer from "../../utils/countdownTimer";
 import "./home.css"
 
+import Ilma from "../../assets/Ilma.png"
+import Maa from "../../assets/Maa.png"
+import Tuli from "../../assets/Tuli.png"
+import Vesi from "../../assets/Vesi.png"
+
 
 function Home({date}) {
     return <div className={"Container"}>
@@ -20,31 +25,23 @@ function Home({date}) {
 }
 
 function Item1() {
-    return <div className={"BaseItem Item-1"}>
-        <div className={"Item1-Rect"}/>
-        <div className={"Item1-Triangle"}/>
+    return <div alt="Maa" src={Maa} className={"BaseItem Item-1"}>
     </div>
 }
 
 function Item2() {
-    return <div className={"BaseItem Item-2"}>
-        <div className={"Item2-MidRect"}/>
-        <div className={"Item2-TopRect"}/>
+    return <div alt="Ilma" src={Ilma} className={"BaseItem Item-2"}>
     </div>
 
 }
 
 function Item3() {
-    return <div className={"BaseItem Item-3"}>
-        <div className={"Item3-TopRect"}/>
-        <div className={"Item3-BottomRect"}/>
+    return <div alt="Tuli" src={Tuli} className={"BaseItem Item-3"} >
     </div>
 }
 
 function Item4() {
-    return <div className={"BaseItem Item-4"}>
-        <div className={"Item4-LeftRect"}/>
-        <div className={"Item4-RightRect"}/>
+    return <div alt="Vesi" src={Vesi} className={"BaseItem Item-4"}>
     </div>
 }
 

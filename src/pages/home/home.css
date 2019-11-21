@@ -15,22 +15,23 @@
     position: relative;
     text-align: center;
     box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+    background-size: cover;
 }
 
 .Item-1 {
-    background: #0C9207;
+    background-image: url(../../assets/Maa.png);
 }
 
 .Item-2 {
-    background: #5CA1D9;
+    background-image: url(../../assets/Ilma.png);
 }
 
 .Item-3 {
-    background: #e53935;
+    background-image: url(../../assets/Tuli.png);
 }
 
 .Item-4 {
-    background: #06A4B8;
+    background-image: url(../../assets/Vesi.png);
 }
 
 .TitleCard {
