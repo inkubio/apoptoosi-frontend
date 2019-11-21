@@ -54,7 +54,7 @@ function Signup() {
 
 function Footer() {
     return <div className={"Footer"}>
-        <img className={"Logo"}
+        <img className={"Logo"} alt="Inkubio logo"
              src={"https://www.inkubio.fi/wp-content/themes/suurinkubio/assets/images/inkulogo-viher.svg"}/>
     </div>
 }
