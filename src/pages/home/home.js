@@ -2,47 +2,35 @@ import React from 'react';
 import CountDownTimer from "../../utils/countdownTimer";
 import "./home.css"
 
-import Ilma from "../../assets/Ilma.png"
-import Maa from "../../assets/Maa.png"
-import Tuli from "../../assets/Tuli.png"
-import Vesi from "../../assets/Vesi.png"
+import PropTypes from 'prop-types';
 
-
-function Home({date}) {
+const Home = ({date, className}) => {
     return <div className={"Container"}>
         <div className={"Grid"}>
-            <Item1/>
-            <Item2/>
-            <Item3/>
-            <Item4/>
+            <Item className={"Item-1"}/>
+            <Item className={"Item-2"}/>
+            <Item className={"Item-3"}/>
+            <Item className={"Item-4"}/>
         </div>
         <div className={"TitleCard"}>
             <h1 className={"Title"}>Apoptoosi XVI</h1>
             <p className={"Date"}>{date.toLocaleString()}</p>
-            <CountDownTimer className={"Timer"} date={date}/>
+            <CountDownTimer className={"Timer " + className} date={date}/>
         </div>
     </div>
-}
+};
 
-function Item1() {
-    return <div alt="Maa" src={Maa} className={"BaseItem Item-1"}>
-    </div>
-}
+const Item = ({className}) => {
+    return <div className={"BaseItem " + className} />
+};
 
-function Item2() {
-    return <div alt="Ilma" src={Ilma} className={"BaseItem Item-2"}>
-    </div>
+Home.propTypes = {
+    date: PropTypes.instanceOf(Date).isRequired,
+    className: PropTypes.string
+};
 
-}
-
-function Item3() {
-    return <div alt="Tuli" src={Tuli} className={"BaseItem Item-3"} >
-    </div>
-}
-
-function Item4() {
-    return <div alt="Vesi" src={Vesi} className={"BaseItem Item-4"}>
-    </div>
-}
+Item.propTypes = {
+    className: PropTypes.string
+};
 
 export default Home;

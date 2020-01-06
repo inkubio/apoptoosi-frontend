@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 
 import PropTypes from 'prop-types';
 
-function CountDownTimer(props) {
+const CountDownTimer = (props) => {
     const [timeUntil, setTimeUntil] = useState(props.date.getTime() - Date.now());
     const one_day = 1000 * 60 * 60 * 24;
     const one_hour = 1000 * 60 * 60;
@@ -23,10 +23,11 @@ function CountDownTimer(props) {
             {days} days, {hours} hours, {minutes} minutes, {seconds} seconds
         </div>
     );
-}
+};
 
 CountDownTimer.propTypes = {
-    date: PropTypes.instanceOf(Date),
+    date: PropTypes.instanceOf(Date).isRequired,
+    className: PropTypes.string
 };
 
 export default CountDownTimer;

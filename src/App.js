@@ -11,7 +11,7 @@ import Home from "./pages/home/home.js";
 import './App.css';
 
 
-function App() {
+const  App = () => {
     let date = new Date(2020, 2, 7, 21, 0, 0, 0);
     return (
         <Router>
@@ -26,7 +26,7 @@ function App() {
                             <Contact/>
                         </Route>
                         <Route path="/signup">
-                            <Signup/>
+                            <SignUp/>
                         </Route>
                     </Switch>
                 </div>
@@ -34,29 +34,33 @@ function App() {
             </div>
         </Router>
     );
-}
+};
 
-function Navigation() {
+
+const Navigation = () => {
     return <nav className={"Navigation"}>
         <Link className={"Link"} to={"/"}>Home</Link>
         <Link className={"Link Signup"} to={"/signup"}>Signup</Link>
         <Link className={"Link"} to={"/contact"}>Contact</Link>
     </nav>
-}
+};
 
-function Contact() {
+
+const Contact = () => {
     return <div>contact</div>
-}
+};
 
-function Signup() {
-    return <div>signup</div>
-}
 
-function Footer() {
+const SignUp = () => {
+    return <div>Sign Up</div>
+};
+
+
+const Footer = () => {
     return <div className={"Footer"}>
         <img className={"Logo"} alt="Inkubio logo"
              src={"https://www.inkubio.fi/wp-content/themes/suurinkubio/assets/images/inkulogo-viher.svg"}/>
     </div>
-}
+};
 
 export default App;
