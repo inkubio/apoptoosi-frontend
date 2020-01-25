@@ -54,69 +54,6 @@
     text-align: center;
 }
 
-.Item1-Triangle {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #078103;
-    clip-path: polygon(0 25%, 0% 100%, 100% 100%);
-}
-
-.Item1-Rect {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #059C00;
-    clip-path: polygon(0 60%, 100% 35%, 100% 100%, 0% 100%);
-}
-
-.Item2-TopRect {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #79C1FB;
-    clip-path: polygon(0 0, 100% 0, 100% 35%, 0 25%);
-}
-
-.Item2-MidRect {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #6EB6F0;
-    clip-path: polygon(0 0, 100% 0, 100% 70%, 0 80%);
-}
-
-.Item3-TopRect {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #d32f2f;
-    clip-path: polygon(0 0, 100% 0, 100% 35%, 0 25%);
-}
-
-.Item3-BottomRect {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #f44336;
-    clip-path: polygon(0 65%, 100% 75%, 100% 100%, 0 100%);
-}
-
-.Item4-LeftRect {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #06B4B8;
-    clip-path: polygon(0 0, 45% 0, 15% 100%, 0 100%);
-}
-
-.Item4-RightRect {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #1D91AF;
-    clip-path: polygon(85% 0, 100% 0, 100% 100%, 55% 100%);
-}
 .Date {
     font-size: 1.3em;
     margin: 0;
