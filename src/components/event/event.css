@@ -5,10 +5,10 @@
     text-align: center;
 }
 .title {
-    font-family: Baskerville, serif;
     margin: 0 0 0.2em 0;
 }
 .content {
+    font-family: "Libre Baskerville",Baskerville, Times, serif;
     align-self: center;
     background-image:
         radial-gradient(rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 70%);
