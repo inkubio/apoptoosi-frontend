@@ -2,11 +2,12 @@ import React from 'react';
 import "./events.css"
 
 import Event from '../../components/event/event';
+import strings from "../../utils/translations";
 
 const Events = () => {
   return <div className={"Base"}>
     <div className={"Events"}>
-      <Event title={"joku kiva tapahtuma"} link={"http://www.example.com"} linkText={"link text"} day={"01"} month={"03"}>
+      <Event title={strings.eventTitle1} link={"http://www.example.com"} linkText={"link text"} day={"01"} month={"03"}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut

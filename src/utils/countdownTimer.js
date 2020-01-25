@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 
 import PropTypes from 'prop-types';
+import strings from "./translations";
 
 const CountDownTimer = (props) => {
     const [timeUntil, setTimeUntil] = useState(props.date.getTime() - Date.now());
@@ -20,7 +21,7 @@ const CountDownTimer = (props) => {
     let seconds = Math.floor((timeUntil - days * one_day - one_hour * hours - one_minute * minutes) / one_second);
     return (
         <div className={props.className}>
-            {days} days, {hours} hours, {minutes} minutes, {seconds} seconds
+            {days} {strings.days}, {hours} {strings.hours}, {minutes} {strings.minutes}, {seconds} {strings.seconds}
         </div>
     );
 };
