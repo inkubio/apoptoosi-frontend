@@ -1,0 +1,22 @@
+.Card {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 50%;
+    text-align: center;
+}
+.title {
+    margin: 0 0 0.2em 0;
+}
+.content {
+    align-self: center;
+    background-image:
+        radial-gradient(rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 70%);
+    width: 80%;
+    padding: 2em 10em 1em 10em;
+    margin: 0;
+}
+.link {
+    margin: 0;
+    color: #0098d4;
+}
