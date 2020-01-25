@@ -1,11 +1,11 @@
 .Card {
     display: flex;
     flex-direction: column;
-    width: 80%;
-    height: 50%;
+    width: 100%;
     text-align: center;
 }
 .title {
+    font-family: Baskerville, serif;
     margin: 0 0 0.2em 0;
 }
 .content {

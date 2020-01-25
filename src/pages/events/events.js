@@ -35,7 +35,4 @@ const Events = () => {
   </div>
 };
 
-const Divider = () => {
-  return <div className={"Divider"} />
-}
 export default Events;
