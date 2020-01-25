@@ -1,3 +1,12 @@
+@font-face {
+  font-family:"BerlinCollection";
+  src: url("assets/Berlin_Collection.eot") format("eot"),
+  url("assets/Berlin_Collection.woff") format("woff"),
+  url("assets/Berlin_Collection.ttf") format("truetype"),
+  url("assets/Berlin_Collection.svg#BerlinCollectionRegular") format("svg");
+  font-weight:normal;font-style:normal;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
