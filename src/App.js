@@ -9,6 +9,7 @@ import {
 import Home from "./pages/home/home.js";
 import Events from "./pages/events/events";
 import strings from "./utils/translations";
+import eventLogo from "./assets/logo.png";
 
 import './App.css';
 
@@ -45,10 +46,13 @@ const  App = () => {
 
 const Navigation = ({setLang}) => {
     return <nav className={"Navigation"}>
-        <Link className={"Link"} to={"/"}>{strings.home}</Link>
-        <Link className={"Link Signup"} to={"/signup"}>{strings.signUp}</Link>
-        <Link className={"Link"} to={"/contact"}>{strings.contact}</Link>
-        <Link className={"Link"} to={"/events"}>{strings.events}</Link>
+        <div className={"Filler"}>FI/EN</div>
+         <div className={"NavItems"}>
+             <Link className={"Link"} to={"/"}>{strings.home}</Link>
+             <Link className={"Link Signup"} to={"/signup"}>{strings.signUp}</Link>
+             <Link className={"Link"} to={"/contact"}>{strings.contact}</Link>
+             <Link className={"Link"} to={"/events"}>{strings.events}</Link>
+         </div>
         <div className={"Language"}>
             <button onClick={() => {
                 setLang('fi');

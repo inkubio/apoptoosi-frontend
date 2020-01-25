@@ -62,7 +62,7 @@
 }
 
 .Date {
-    font-family: "Libre Baskerville", Times, serif;
+    font-family: "Libre Baskerville", Baskerville, Times, serif;
     font-size: 1.3em;
     margin: 0;
     text-align: center;
@@ -70,7 +70,7 @@
 }
 
 .Timer {
-    font-family: "Libre Baskerville", Times, serif;
+    font-family: "Libre Baskerville", Baskerville, Times, serif;
     font-weight: lighter;
     text-align: center;
     width: 100%;
