@@ -9,12 +9,13 @@
 }
 .content {
     font-family: "Libre Baskerville",Baskerville, Times, serif;
-    align-self: center;
+    width: 100%;
     background-image:
         radial-gradient(rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 70%);
+}
+.content > p {
     width: 80%;
-    padding: 2em 10em 1em 10em;
-    margin: 0;
+    margin: 0 auto;
 }
 .link {
     margin: 0;

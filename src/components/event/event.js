@@ -8,7 +8,10 @@ const Event = ({title, children, link, linkText, day, month}) => {
     return <div className={"Card"} onClick={() => setDesc(!showDesc)}>
         <h2 className={"title"}>{title}</h2>
         <time>{day}/{month}</time>
-        {showDesc ? <p className={"content"}>{children}</p>: ''}
+        {showDesc ? <div className={"content"}>
+            <p>{children}</p>
+        </div>
+            : ''}
         <a className={"link"} href={link} target={"_blank"}>{linkText || link}</a>
     </div>
 };

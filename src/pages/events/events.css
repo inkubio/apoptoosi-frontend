@@ -14,5 +14,16 @@
 }
 .Events {
     height: 100%;
+    width: 100%;
     overflow: scroll;
+}
+@media (max-width: 599px) {
+    .Base {
+        background-image:
+                linear-gradient(0turn, rgba(255,255,255,0) 70%, rgba(255,255,255,1) 100%),
+                linear-gradient(0.25turn, rgba(255,255,255,0) 70%, rgba(255,255,255,1) 140%),
+                linear-gradient(0.5turn, rgba(255,255,255,0) 70%, rgba(255,255,255,1) 100%),
+                linear-gradient(0.75turn, rgba(255,255,255,0) 70%, rgba(255,255,255,1) 140%),
+                url(../../assets/Background.png);
+    }
 }
