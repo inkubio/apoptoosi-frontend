@@ -57,8 +57,6 @@ button {
     background-color: transparent;
     cursor: pointer;
 }
-button:focus {outline:0;}
-
 .Signup {
     /*pointer-events: none;
     color: grey;*/
