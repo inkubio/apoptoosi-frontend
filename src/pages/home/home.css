@@ -41,8 +41,8 @@
     position: absolute;
     background: rgba(255,255,255,0.8);
     box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.1);
-    width: 40vw;
-    height: 20vh;
+    width: 40%;
+    height: 20%;
     top: calc(45% - 10vh);
     left: calc(50% - 20vw);
     border-style: solid;
@@ -55,7 +55,7 @@
     color: transparent;
     -webkit-text-stroke-width: 0.25px;
     -webkit-text-stroke-color: black;
-    margin-top: 0px;
+    margin-top: 0;
     margin-bottom: 10px;
     font-size: 3em;
     text-align: center;
