@@ -1,4 +1,3 @@
-import {useState} from 'react';
 import LocalizedStrings from 'react-localization';
 
 const strings = new LocalizedStrings({
