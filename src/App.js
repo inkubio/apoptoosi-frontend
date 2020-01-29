@@ -6,8 +6,8 @@ import {
     Link
 } from "react-router-dom";
 
-import Home from "./pages/home/home.js";
-import Events from "./pages/events/events";
+import {Home, Events, SignUp} from "./pages";
+
 import strings from "./utils/translations";
 import eventLogo from "./assets/logo.png";
 
@@ -49,10 +49,10 @@ const Navigation = ({setLang}) => {
     return <nav className={"Navigation"}>
         <div className={"Filler"}>FI/EN</div>
          <div className={"NavItems"}>
-             <Link className={"Link"} to={"/"}>{strings.home}</Link>
+             <Link className={"Link Home"} to={"/"}>{strings.home}</Link>
              <Link className={"Link Signup"} to={"/signup"}>{strings.signUp}</Link>
-             <Link className={"Link"} to={"/contact"}>{strings.contact}</Link>
-             <Link className={"Link"} to={"/events"}>{strings.events}</Link>
+             <Link className={"Link Contact"} to={"/contact"}>{strings.contact}</Link>
+             <Link className={"Link Events"} to={"/events"}>{strings.events}</Link>
          </div>
         <div className={"Language"}>
             <button onClick={() => {
@@ -69,11 +69,6 @@ const Navigation = ({setLang}) => {
 
 const Contact = () => {
     return <div>contact</div>
-};
-
-
-const SignUp = () => {
-    return <div>Sign Up</div>
 };
 
 const Footer = () => {

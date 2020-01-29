@@ -59,5 +59,16 @@ button {
 button:focus {outline:0;}
 
 .Signup {
+    /*pointer-events: none;
+    color: grey;*/
+}
+.Contact {
     display: none;
+}
+.Home {
+
+}
+
+.Events {
+
 }
