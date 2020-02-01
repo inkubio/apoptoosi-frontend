@@ -93,6 +93,15 @@
     margin: auto;
     width: 600px;
     max-width: 95%;
+    background-image:
+            linear-gradient(0turn, rgba(255,255,255,0.3) 70%, rgba(255,255,255,1) 100%),
+            linear-gradient(0.25turn, rgba(255,255,255,0.3) 90%, rgba(255,255,255,1) 100%),
+            linear-gradient(0.5turn, rgba(255,255,255,0.3) 70%, rgba(255,255,255,1) 100%),
+            linear-gradient(0.75turn, rgba(255,255,255,0.3) 90%, rgba(255,255,255,1) 100%),
+            url(../../assets/Background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .Timetable {
     display: grid;
@@ -105,6 +114,15 @@
     grid-column-gap: 5px;
     grid-row-gap: 15px;
     padding: 10px;
+    background-image:
+            linear-gradient(0turn, rgba(255,255,255,0.3) 70%, rgba(255,255,255,1) 100%),
+            linear-gradient(0.25turn, rgba(255,255,255,0.3) 90%, rgba(255,255,255,1) 100%),
+            linear-gradient(0.5turn, rgba(255,255,255,0.3) 70%, rgba(255,255,255,1) 100%),
+            linear-gradient(0.75turn, rgba(255,255,255,0.3) 90%, rgba(255,255,255,1) 100%),
+            url(../../assets/Background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .Timetable > p {
     margin: 0;
