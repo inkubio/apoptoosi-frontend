@@ -49,7 +49,7 @@ const Home = ({date, className}) => {
             <p>Jatkot</p>
             <p>Klo 24.00</p>
             <p>Paikka X</p>
-            <p>Jatkot</p>
+            <p>Sillis</p>
             <p> 8.3. Klo 12.00</p>
             <p>Paikka Y</p>
         </div>
