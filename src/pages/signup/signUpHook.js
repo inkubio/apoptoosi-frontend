@@ -8,6 +8,7 @@ const useSignUpForm = (callback) => {
         allergies: "",
         alcohol: "",
         tableGroup: "",
+        diet: "",
         avec: "",
     });
 

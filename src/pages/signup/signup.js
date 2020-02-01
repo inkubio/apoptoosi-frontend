@@ -2,7 +2,7 @@ import React from 'react';
 
 import "./signup.css";
 import useSignUpForm from "./signUpHook";
-import Event from "../../components/event/event";
+import InputField from "../../components/inputField/inputField";
 
 const SignUp = ({}) => {
 
@@ -29,95 +29,124 @@ const SignUp = ({}) => {
             voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
             occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
-        <p> Ilmoittautumalla hyväksyt
-        <a className={"PrivacyPolicy"}
-           target="blank_"
-           href="https://www.inkubio.fi/wp-content/uploads/tiedostot/muut/tapahtumien-ilmoittautumisrekisterin-tietosuojaseloste.pdf"
-        > tietosuojaselosteen</a></p>
         <form onSubmit={handleSubmit}>
-            <div className={"Names"}>
-                <div>
-                    <label className={"required"}>First Name</label>
-                    <input
-                        type="text"
-                        name="firstName"
-                        onChange={handleInputChange}
-                        placeholder={"First Name"}
-                        value={inputs.firstName}
-                        required />
-                </div>
-                <div>
-                    <label className={"required"}>Last Name</label>
-                    <input
-                        type="text"
-                        name="lastName"
-                        placeholder={"Last Name"}
-                        onChange={handleInputChange}
-                        value={inputs.lastName}
-                        required />
-                </div>
-            </div>
-            <label className={"required"}>Email Address</label>
-            <input
-                type="email"
-                name="email"
-                placeholder={"matti.meikalaine@aalto.fi"}
-                onChange={handleInputChange}
-                value={inputs.email}
-                required />
-            <label>Allergies</label>
-            <input
-                type="text"
-                name="allergies"
-                placeholder={"Allergiat"}
-                onChange={handleInputChange}
-                value={inputs.allergies}
-                />
-            <div className={"RadioSelect"}>
-                <label className={"required"}>Alchol</label>
-                <div className={"radioOption"}>
-                    <input
-                        className={"radioInput"}
-                        type="radio"
-                        name="alcohol"
-                        value="yes"
-                        checked={inputs.alcohol === "yes"}
-                        onChange={handleInputChange}
-                        required
-                    />
-                    <label>Yes</label>
-                </div>
-                <div className={"radioOption"}>
-                    <input
-                        className={"radioInput"}
-                        type="radio"
-                        name="alcohol"
-                        value="no"
-                        checked={inputs.alcohol === "no"}
-                        onChange={handleInputChange}
-                    />
-                    <label>No</label>
-                </div>
-            </div>
-            <label>Pöytäseuruetoive</label>
-            <input
-                type="text"
-                name="tableGroup"
-                placeholder={"matti ja teppo"}
-                onChange={handleInputChange}
-                value={inputs.tableGroup}
-            />
-            <label>Avec</label>
-            <input
-                type="text"
-                name="avec"
-                placeholder={"rakkainpain"}
-                onChange={handleInputChange}
-                value={inputs.avec}
-            />
+            <Name firstName={inputs.firstName} lastName={inputs.lastName} handleInputChange={handleInputChange}/>
+            <Email email={inputs.email} handleInputChange={handleInputChange}/>
+            <Diet diet={inputs.diet} handleInputChange={handleInputChange}/>
+            <AlcoholStatus alcohol={inputs.alcohol} handleInputChange={handleInputChange}/>
+            <TableGroup tableGroup={inputs.tableGroup} handleInputChange={handleInputChange}/>
+            <Avec avec={inputs.avec} handleInputChange={handleInputChange} />
+            <Consent/>
             <button className={"Submit"} type="submit">Sign Up</button>
         </form>
     </div>
 };
+
+const Name = ({firstName, lastName, handleInputChange}) => {
+    return <div className={"Names"}>
+        <InputField required={true}
+                   inputClass={"nameField"}
+                   type="text"
+                   text={"text"}
+                   name={"firstName"}
+                   onChange={handleInputChange}
+                   placeholder={"Matti"}
+                   value={firstName}
+        >First Name</InputField>
+        <InputField required={true}
+                   inputClass={"nameField"}
+                   type="text"
+                   text={"text"}
+                   name={"lastName"}
+                   onChange={handleInputChange}
+                   placeholder={"Meikäläinen"}
+                   value={lastName}
+        >Last Name</InputField>
+    </div>
+};
+
+const Email = ({email, handleInputChange}) => {
+    return <InputField required={true}
+                      type={"email"}
+                      name={"email"}
+                      onChange={handleInputChange}
+                      placeholder={"matti.meikalaine@aalto.fi"}
+                      value={email}
+    >Email Address</InputField>
+};
+
+const Diet = ({diet, handleInputChange}) => {
+    return <InputField
+            type={"text"}
+            name={"diet"}
+            onChange={handleInputChange}
+            placeholder={"diet"}
+            value={diet}
+        >Diet</InputField>
+};
+
+const AlcoholStatus = ({alcohol, handleInputChange}) => {
+    return <div className={"RadioSelect"}>
+        <label className={"required"}>Alcohol</label>
+        <div className={"radioOption"}>
+            <input
+                className={"radioInput"}
+                type="radio"
+                name="alcohol"
+                value="yes"
+                checked={alcohol === "yes"}
+                onChange={handleInputChange}
+                required
+            />
+            <label>Yes</label>
+        </div>
+        <div className={"radioOption"}>
+            <input
+                className={"radioInput"}
+                type="radio"
+                name="alcohol"
+                value="no"
+                checked={alcohol === "no"}
+                onChange={handleInputChange}
+            />
+            <label>No</label>
+        </div>
+    </div>
+};
+
+const TableGroup = ({tableGroup, handleInputChange}) => {
+    return <InputField
+        type={"text"}
+        name={"tableGroup"}
+        onChange={handleInputChange}
+        placeholder={"Matti ja Teppo"}
+        value={tableGroup}
+    >Table Group</InputField>
+};
+
+const Avec = ({avec, handleInputChange}) => {
+  return <InputField
+      type={"text"}
+      name={"avec"}
+      onChange={handleInputChange}
+      placeholder={"Joku"}
+      value={avec}
+  >Avec</InputField>
+};
+
+const Consent = () => {
+    return <div>
+        <input type="checkbox" id="consent" name="consent" value="consent" required />
+        <label htmlFor="consent" className={"Consent"}>
+            Hyväksy
+            <a className={"PrivacyPolicy"}
+               target="blank_"
+               href="https://www.inkubio.fi/wp-content/uploads/tiedostot/muut/tapahtumien-ilmoittautumisrekisterin-tietosuojaseloste.pdf"
+            > tietosuojaseloste</a>
+        </label>
+    </div>
+};
+
+
 
 export default SignUp;

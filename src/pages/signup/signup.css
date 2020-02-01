@@ -14,12 +14,6 @@
     background-repeat: no-repeat;
     overflow: scroll;
 }
-
-.Names {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
 .Info {
     margin: 10px auto;
     width: 600px;
@@ -29,12 +23,7 @@
 .PrivacyPolicy {
     color: #0098d4;
 }
-.required:after {
-    font-size: 0.75em;
-    content:"*";
-    color: darkred;
 
-}
 .Submit {
     margin: 10px;
     padding: 0 5px;
@@ -42,27 +31,19 @@
     border-radius: 10px;
     border: solid 1px;
 }
-label {
-    font-size: 1.2em;
-}
 form {
     display: inline-block;
     width: 400px;
     max-width: 90%;
 }
-textarea, input {
-    text-align: center;
-    margin: 2px 0;
-    height: 2.5em;
-    font-size: 1em;
+
+.Names {
     width: 100%;
-    border: none;
-    border-bottom: 1px solid grey;
-    background-image:none;
-    background-color:transparent;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
+    display: flex;
+    justify-content: space-between;
+}
+.nameField {
+    width: 90%;
 }
 .RadioSelect {
     display: flex;
@@ -80,6 +61,17 @@ textarea, input {
 
 input[type="radio"] {
     width: auto;
+}
+input[type="checkbox"] {
+    display: inline-block;
+    vertical-align: middle;
+    width: auto;
+    margin: 0 5px;
+}
+
+.Consent {
+    display: inline-block;
+    vertical-align: middle;
 }
 @media (max-width: 599px) {
     .Base {
