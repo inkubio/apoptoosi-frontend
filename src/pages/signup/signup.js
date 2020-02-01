@@ -3,20 +3,20 @@ import React from 'react';
 import "./signup.css";
 import useSignUpForm from "./signUpHook";
 import InputField from "../../components/inputField/inputField";
+import env from "../../env";
 
-const SignUp = ({}) => {
+const SignUp = () => {
 
-    const submit = () => {
-        alert(`Sign up succesfully
-        Name: ${inputs.firstName} ${inputs.lastName}
-        Email: ${inputs.email}
-        Allergies: ${inputs.allergies}
-        Alcohol: ${inputs.alcohol}
-        Table Group: ${inputs.tableGroup}
-        Avec: ${inputs.avec}`
-        );
-
-    };
+    async function submit() {
+        const res = await fetch(env.api + '/signup', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(inputs)
+        });
+        return await res.json();
+    }
 
     const {inputs, handleInputChange, handleSubmit} = useSignUpForm(submit);
 
