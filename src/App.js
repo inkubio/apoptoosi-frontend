@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {
     BrowserRouter as Router,
+    Redirect,
     Switch,
     Route,
     Link
@@ -33,9 +34,10 @@ const  App = () => {
                         <Route path="/signup">
                             <SignUp/>
                         </Route>
-                        <Route>
+                        <Route path={"/events"}>
                             <Events/>
                         </Route>
+                        <Redirect to="/"/>
                     </Switch>
                 </div>
                 <Footer/>
