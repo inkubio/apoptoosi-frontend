@@ -5,13 +5,14 @@ const useSignUpForm = (callback) => {
         firstName: "",
         lastName: "",
         email: "",
-        alcohol: true,
+        alcohol: "",
         tableGroup: "",
         diet: "",
         avec: "",
-        gift: false,
-        invited: false,
-        alumnu: false,
+        organisation: "",
+        gift: "",
+        invited: true,
+        alumni: "",
     });
 
     const handleSubmit = (event) => {

@@ -31,6 +31,12 @@
     border-radius: 10px;
     border: solid 1px;
 }
+.Button:focus {
+    outline: none;
+}
+.Button-selected {
+    border-color: lightblue;
+}
 form {
     display: inline-block;
     width: 400px;
@@ -44,19 +50,6 @@ form {
 }
 .nameField {
     width: 90%;
-}
-.RadioSelect {
-    display: flex;
-    flex-flow: row;
-    align-items: center;
-    justify-content: space-around;
-    margin: 0 50px;
-}
-.radioOption {
-    display: flex;
-    flex-flow: row;
-    align-items: center;
-    justify-content: center;
 }
 .Participants {
     display: flex;
@@ -75,9 +68,6 @@ form {
     margin: 2px;
 }
 
-input[type="radio"] {
-    width: auto;
-}
 input[type="checkbox"] {
     display: inline-block;
     vertical-align: middle;
