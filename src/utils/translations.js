@@ -19,7 +19,7 @@ const strings = new LocalizedStrings({
         other: "Muut vieraat",
         consent: "Hyväksyn",
         privacyPolicy: "tietosuojaselosteen",
-        signUpInfo: "Lorem ipsum",
+        signUpInfo: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         formFields: {
             firstName: "Etunimi",
             lastName: "Sukunimi",
@@ -30,6 +30,7 @@ const strings = new LocalizedStrings({
             alcohol: "Alkoholillinen",
             gift: "Jätän tervehdyksen",
             alumni: "Olen alumni",
+            invited: "Olen kutsuvieras",
             organisation: "Edustamani taho",
         },
         timetable: "Aikataulu",
@@ -51,7 +52,7 @@ const strings = new LocalizedStrings({
         ],
         mainEvent: {
             title: "Apoptoosi XVI",
-            description: "Lorem ipsum",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             cocktailParty: {
                 title: "Cocktail tilaisuus",
                 when: "Klo 15:00",
@@ -73,6 +74,7 @@ const strings = new LocalizedStrings({
                 where: "Paikka Y",
             }
         },
+        successInfo: "Kiitos ilmoittautumisesta. Sinulle on lähetetty vahvistusviesti antamaasi sähköpostiosoitteeseen"
 
 
     },
@@ -94,7 +96,7 @@ const strings = new LocalizedStrings({
         other: "Other Guests",
         consent: "I agree to",
         privacyPolicy: "Privacy Policy",
-        signUpInfo: "Lorem ipsum",
+        signUpInfo: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         formFields: {
             firstName: "First Name",
             lastName: "Last Name",
@@ -105,6 +107,7 @@ const strings = new LocalizedStrings({
             alcohol: "Alcohol",
             gift: "I shall leave a salute",
             alumni: "I am an alumni",
+            invited: "I am invited guest",
             organisation: "Represented Organisation",
         },
         timetable: "Timetable",
@@ -126,7 +129,7 @@ const strings = new LocalizedStrings({
         ],
         mainEvent: {
             title: "Apoptoosi XVI",
-            description: "Lorem ipsum",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             cocktailParty: {
                 title: "Cocktail party",
                 when: "At 15:00",
@@ -148,6 +151,7 @@ const strings = new LocalizedStrings({
                 where: "Place Y",
             }
         },
+        successInfo: "Thank you for signing up. Confirmation email have been send to given email address"
     }
 });
 

@@ -7,10 +7,10 @@ import {
     Link
 } from "react-router-dom";
 
-import {Home, Events, SignUp} from "./pages";
+
+import {Home, Events, SignUp, Success} from "./pages";
 
 import strings from "./utils/translations";
-import eventLogo from "./assets/logo.png";
 
 import './App.css';
 
@@ -31,8 +31,14 @@ const  App = () => {
                         <Route path="/contact">
                             <Contact/>
                         </Route>
-                        <Route path="/signup">
+                        <Route exact path="/signup">
                             <SignUp/>
+                        </Route>
+                        <Route path="/signup/success">
+                            <Success />
+                        </Route>
+                        <Route path="/edit">
+                            TEST
                         </Route>
                         <Route path={"/events"}>
                             <Events/>

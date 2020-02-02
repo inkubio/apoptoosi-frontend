@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-
+import {Route, Redirect} from "react-router-dom";
 import './signup.css';
 import useSignUpForm from './signUpHook';
 import InputField from '../../components/inputField/inputField';
@@ -17,6 +17,7 @@ const SignUp = () => {
         maxSpots: 0,
         usedSpots: 0,
     });
+    const [isSuccess, setSuccess] = useState(false);
 
     function submit() {
         if (subPage === 0) {
@@ -29,9 +30,12 @@ const SignUp = () => {
             },
             body: JSON.stringify(inputs)
         })
-            .then((response) => response.json())
-            .then((data) => {
-                return data;
+            .then((response) => {
+                if (response.status === 201) {
+                    setSuccess(true);
+                } else {
+                    throw response.status;
+                }
             })
             .catch((error) => {
                 console.log(error);
@@ -57,7 +61,7 @@ const SignUp = () => {
 
     function renderSwitch() {
         switch (subPage) {
-            case 0:
+            case 0 :
                 return <form onSubmit={handleSubmit}>
                     <Name firstName={inputs.firstName} lastName={inputs.lastName}
                           handleInputChange={handleInputChange}/>
@@ -94,7 +98,7 @@ const SignUp = () => {
                     </div>
                     <div className={'Row'}>
                         <p>{strings.name}</p>
-                        <p>{strings.tableGroup}</p>
+                        <p>{strings.formFields.tableGroup}</p>
                     </div>
                     {participants.map(i => (
                         <div key={i.id} className={'Row'}>
@@ -110,6 +114,10 @@ const SignUp = () => {
 
 
     return <div className={'Base'}>
+        {isSuccess ? <Redirect to={{
+            pathname: '/signup/success',
+            state: { id: '123' }
+        }} /> : null}
         <p className={'Info'}>{strings.signUpInfo}</p>
         <div>
             <button className={'Button' + (subPage === 0 ? ' Button-selected' : '')}
@@ -123,6 +131,7 @@ const SignUp = () => {
             }}>{strings.participants}</button>
         </div>
         {renderSwitch()}
+
     </div>
 };
 
