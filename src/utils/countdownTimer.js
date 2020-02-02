@@ -14,7 +14,7 @@ const CountDownTimer = (props) => {
             setTimeUntil(props.date.getTime() - Date.now());
         }, 1000);
         return () => clearInterval(interval);
-    });
+    }, [props.date]);
     let days = Math.floor(timeUntil / one_day);
     let hours = Math.floor((timeUntil - days * one_day) / one_hour);
     let minutes = Math.floor((timeUntil - days * one_day - one_hour * hours) / one_minute);
