@@ -24,10 +24,10 @@
     color: #0098d4;
 }
 
-.Submit {
+.Button {
     margin: 10px;
     padding: 0 5px;
-    font-size: 2em;
+    font-size: 1.5em;
     border-radius: 10px;
     border: solid 1px;
 }
@@ -57,6 +57,22 @@ form {
     flex-flow: row;
     align-items: center;
     justify-content: center;
+}
+.Participants {
+    display: flex;
+    flex-flow: column;
+
+}
+.Row {
+    margin: auto;
+    width: 400px;
+    max-width: 95%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+.Row > p {
+    margin: 2px;
 }
 
 input[type="radio"] {

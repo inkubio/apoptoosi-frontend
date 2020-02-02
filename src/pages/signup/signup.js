@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import "./signup.css";
 import useSignUpForm from "./signUpHook";
@@ -7,18 +7,88 @@ import env from "../../env";
 
 const SignUp = () => {
 
-    async function submit() {
-        const res = await fetch(env.api + '/signup', {
+    const {inputs, handleInputChange, handleSubmit} = useSignUpForm(submit);
+    const [subPage, setSubPage] = useState(0);
+    const [participants, setParticipants] = useState([]);
+    const [spots, setSpots]  = useState({
+        maxSpots: 0,
+        usedSpots: 0,
+    });
+
+    function submit() {
+        fetch(env.api + '/signup', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(inputs)
-        });
-        return await res.json();
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                return data;
+            })
+            .catch((error) => {
+                console.log(error);
+                alert("Something went wrong");
+            });
+    }
+    function fetchParticipants() {
+        fetch(env.api + '/participants')
+            .then(res => res.json())
+            .then(data => {
+                setParticipants(data);
+            });
+    }
+    function fetchSpots() {
+        fetch(env.api + '/spots')
+            .then(res => res.json())
+            .then(data => {
+                setSpots(data);
+            });
     }
 
-    const {inputs, handleInputChange, handleSubmit} = useSignUpForm(submit);
+    function renderSwitch() {
+        switch(subPage) {
+            case 1:
+                return <form onSubmit={handleSubmit}>
+                    <Name firstName={inputs.firstName} lastName={inputs.lastName} handleInputChange={handleInputChange}/>
+                    <Email email={inputs.email} handleInputChange={handleInputChange}/>
+                    <Diet diet={inputs.diet} handleInputChange={handleInputChange}/>
+                    <AlcoholStatus alcohol={inputs.alcohol} handleInputChange={handleInputChange}/>
+                    <TableGroup tableGroup={inputs.tableGroup} handleInputChange={handleInputChange}/>
+                    <Avec avec={inputs.avec} handleInputChange={handleInputChange} />
+                    <Consent/>
+                    <button className={"Button"} type="submit">Sign Up</button>
+                </form>;
+            case 2:
+                return <div className={"Participants"}>
+                    <div>
+                        {spots.usedSpots} / {spots.maxSpots}
+                    </div>
+                    <div className={"Row"}>
+                        <p>Name</p>
+                        <p>Table group</p>
+                    </div>
+                    {participants.map(i => (
+                        <div key={i.id} className={"Row"}>
+                            <p>{i.firstname} {i.lastname}</p>
+                            <p>{i.tableGroup}</p>
+                        </div>
+                    ))}
+                </div>;
+            default:
+                return <form onSubmit={handleSubmit}>
+                    <Name firstName={inputs.firstName} lastName={inputs.lastName} handleInputChange={handleInputChange}/>
+                    <Email email={inputs.email} handleInputChange={handleInputChange}/>
+                    <Diet diet={inputs.diet} handleInputChange={handleInputChange}/>
+                    <AlcoholStatus alcohol={inputs.alcohol} handleInputChange={handleInputChange}/>
+                    <TableGroup tableGroup={inputs.tableGroup} handleInputChange={handleInputChange}/>
+                    <Avec avec={inputs.avec} handleInputChange={handleInputChange} />
+                    <Consent/>
+                    <button className={"Button"} type="submit">Sign Up</button>
+                </form>;
+        }
+    }
 
     return <div className={"Base"}>
         <p className={"Info"}>
@@ -29,16 +99,16 @@ const SignUp = () => {
             voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
             occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
-        <form onSubmit={handleSubmit}>
-            <Name firstName={inputs.firstName} lastName={inputs.lastName} handleInputChange={handleInputChange}/>
-            <Email email={inputs.email} handleInputChange={handleInputChange}/>
-            <Diet diet={inputs.diet} handleInputChange={handleInputChange}/>
-            <AlcoholStatus alcohol={inputs.alcohol} handleInputChange={handleInputChange}/>
-            <TableGroup tableGroup={inputs.tableGroup} handleInputChange={handleInputChange}/>
-            <Avec avec={inputs.avec} handleInputChange={handleInputChange} />
-            <Consent/>
-            <button className={"Submit"} type="submit">Sign Up</button>
-        </form>
+        <div>
+            <button className={"Button"} onClick={() => setSubPage(0)}>Kutsuvieraat</button>
+            <button className={"Button"} onClick={() => setSubPage(1)}>Muut vieraat</button>
+            <button className={"Button"}onClick={() => {
+                fetchParticipants();
+                fetchSpots();
+                setSubPage(2);
+            }}>Ilmoittautuneet</button>
+        </div>
+        {renderSwitch()}
     </div>
 };
 
