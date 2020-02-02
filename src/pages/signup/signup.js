@@ -13,13 +13,13 @@ const SignUp = () => {
     const {inputs, handleInputChange, handleSubmit} = useSignUpForm(submit);
     const [subPage, setSubPage] = useState(-1);
     const [participants, setParticipants] = useState([]);
-    const [spots, setSpots]  = useState({
+    const [spots, setSpots] = useState({
         maxSpots: 0,
         usedSpots: 0,
     });
 
     function submit() {
-        if(subPage === 0) {
+        if (subPage === 0) {
             inputs.invited = true;
         }
         fetch(env.api + '/signup', {
@@ -56,32 +56,34 @@ const SignUp = () => {
     }
 
     function renderSwitch() {
-        switch(subPage) {
+        switch (subPage) {
             case 0:
                 return <form onSubmit={handleSubmit}>
-                    <Name firstName={inputs.firstName} lastName={inputs.lastName} handleInputChange={handleInputChange}/>
+                    <Name firstName={inputs.firstName} lastName={inputs.lastName}
+                          handleInputChange={handleInputChange}/>
                     <Email email={inputs.email} handleInputChange={handleInputChange}/>
                     <Diet diet={inputs.diet} handleInputChange={handleInputChange}/>
                     <AlcoholStatus alcohol={inputs.alcohol} handleInputChange={handleInputChange}/>
                     <TableGroup tableGroup={inputs.tableGroup} handleInputChange={handleInputChange}/>
-                    <Avec avec={inputs.avec} handleInputChange={handleInputChange} />
+                    <Avec avec={inputs.avec} handleInputChange={handleInputChange}/>
                     <GiftStatus gift={inputs.gift} handleInputChange={handleInputChange}/>
-                    <AlumniStatus alumni={inputs.alumni} handleInputChange={handleInputChange} />
-                    <Organisation organisation={inputs.organisation} handleInputChange={handleInputChange} />
+                    <AlumniStatus alumni={inputs.alumni} handleInputChange={handleInputChange}/>
+                    <Organisation organisation={inputs.organisation} handleInputChange={handleInputChange}/>
                     <Consent/>
                     <button className={'Button'} type='submit'>{strings.signUp}</button>
                 </form>;
             case 1:
                 return <form onSubmit={handleSubmit}>
-                    <Name firstName={inputs.firstName} lastName={inputs.lastName} handleInputChange={handleInputChange}/>
+                    <Name firstName={inputs.firstName} lastName={inputs.lastName}
+                          handleInputChange={handleInputChange}/>
                     <Email email={inputs.email} handleInputChange={handleInputChange}/>
                     <Diet diet={inputs.diet} handleInputChange={handleInputChange}/>
                     <AlcoholStatus alcohol={inputs.alcohol} handleInputChange={handleInputChange}/>
                     <TableGroup tableGroup={inputs.tableGroup} handleInputChange={handleInputChange}/>
-                    <Avec avec={inputs.avec} handleInputChange={handleInputChange} />
+                    <Avec avec={inputs.avec} handleInputChange={handleInputChange}/>
                     <GiftStatus gift={inputs.gift} handleInputChange={handleInputChange}/>
-                    <AlumniStatus alumni={inputs.alumni} handleInputChange={handleInputChange} />
-                    <Organisation organisation={inputs.organisation} handleInputChange={handleInputChange} />
+                    <AlumniStatus alumni={inputs.alumni} handleInputChange={handleInputChange}/>
+                    <Organisation organisation={inputs.organisation} handleInputChange={handleInputChange}/>
                     <Consent/>
                     <button className={'Button'} type='submit'>{strings.signUp}</button>
                 </form>;
@@ -110,8 +112,10 @@ const SignUp = () => {
     return <div className={'Base'}>
         <p className={'Info'}>{strings.signUpInfo}</p>
         <div>
-            <button className={'Button' + (subPage === 0 ? ' Button-selected' : '')} onClick={() => setSubPage(0)}>{strings.guests}</button>
-            <button className={'Button' + (subPage === 1 ? ' Button-selected' : '')} onClick={() => setSubPage(1)}>{strings.other}</button>
+            <button className={'Button' + (subPage === 0 ? ' Button-selected' : '')}
+                    onClick={() => setSubPage(0)}>{strings.guests}</button>
+            <button className={'Button' + (subPage === 1 ? ' Button-selected' : '')}
+                    onClick={() => setSubPage(1)}>{strings.other}</button>
             <button className={'Button' + (subPage === 2 ? ' Button-selected' : '')} onClick={() => {
                 fetchParticipants();
                 fetchSpots();
@@ -125,47 +129,50 @@ const SignUp = () => {
 const Name = ({firstName, lastName, handleInputChange}) => {
     return <div className={'Names'}>
         <InputField required={true}
-                   inputClass={'nameField'}
-                   type='text'
-                   text={'text'}
-                   name={'firstName'}
-                   onChange={handleInputChange}
-                   placeholder={'Matti'}
-                   value={firstName}
+                    inputClass={'nameField'}
+                    type='text'
+                    text={'text'}
+                    name={'firstName'}
+                    maxLength={50}
+                    onChange={handleInputChange}
+                    placeholder={'Matti'}
+                    value={firstName}
         >{strings.formFields.firstName} ({strings.public})</InputField>
         <InputField required={true}
-                   inputClass={'nameField'}
-                   type='text'
-                   text={'text'}
-                   name={'lastName'}
-                   onChange={handleInputChange}
-                   placeholder={'Meikäläinen'}
-                   value={lastName}
+                    inputClass={'nameField'}
+                    type='text'
+                    text={'text'}
+                    name={'lastName'}
+                    maxLength={50}
+                    onChange={handleInputChange}
+                    placeholder={'Meikäläinen'}
+                    value={lastName}
         >{strings.formFields.lastName} ({strings.public})</InputField>
     </div>
 };
 
 const Email = ({email, handleInputChange}) => {
     return <InputField required={true}
-                      type={'email'}
-                      name={'email'}
-                      onChange={handleInputChange}
-                      placeholder={'matti.meikalainen@aalto.fi'}
-                      value={email}
+                       type={'email'}
+                       name={'email'}
+                       maxLength={255}
+                       onChange={handleInputChange}
+                       placeholder={'matti.meikalainen@aalto.fi'}
+                       value={email}
     >{strings.formFields.email}</InputField>
 };
 
 const Diet = ({diet, handleInputChange}) => {
     return <InputField
-            type={'text'}
-            name={'diet'}
-            onChange={handleInputChange}
-            placeholder={'diet'}
-            value={diet}
-        >{strings.formFields.diet}</InputField>
+        type={'text'}
+        name={'diet'}
+        onChange={handleInputChange}
+        placeholder={'diet'}
+        value={diet}
+    >{strings.formFields.diet}</InputField>
 };
 
-const AlcoholStatus =({alcohol, handleInputChange}) =>  {
+const AlcoholStatus = ({alcohol, handleInputChange}) => {
     return <YesNoRadio
         label={strings.formFields.alcohol}
         name={'alcohol'}
@@ -174,7 +181,7 @@ const AlcoholStatus =({alcohol, handleInputChange}) =>  {
         handleInputChange={handleInputChange}
     />
 };
-const GiftStatus =({gift, handleInputChange}) =>  {
+const GiftStatus = ({gift, handleInputChange}) => {
     return <YesNoRadio
         label={strings.formFields.gift}
         name={'gift'}
@@ -182,7 +189,7 @@ const GiftStatus =({gift, handleInputChange}) =>  {
         handleInputChange={handleInputChange}
     />
 };
-const AlumniStatus =({alumni, handleInputChange}) =>  {
+const AlumniStatus = ({alumni, handleInputChange}) => {
     return <YesNoRadio
         label={strings.formFields.alumni}
         name={'alumni'}
@@ -202,18 +209,19 @@ const TableGroup = ({tableGroup, handleInputChange}) => {
 };
 
 const Avec = ({avec, handleInputChange}) => {
-  return <InputField
-      type={'text'}
-      name={'avec'}
-      onChange={handleInputChange}
-      placeholder={'Joku'}
-      value={avec}
-  >{strings.formFields.avec}</InputField>
+    return <InputField
+        type={'text'}
+        name={'avec'}
+        onChange={handleInputChange}
+        placeholder={'Joku'}
+        value={avec}
+    >{strings.formFields.avec}</InputField>
 };
 const Organisation = ({organisation, handleInputChange}) => {
     return <InputField
         type={'text'}
         name={'organisation'}
+        maxLength={255}
         onChange={handleInputChange}
         placeholder={'Joku'}
         value={organisation}
@@ -222,7 +230,7 @@ const Organisation = ({organisation, handleInputChange}) => {
 
 const Consent = () => {
     return <div>
-        <input type='checkbox' id='consent' name='consent' value='consent' required />
+        <input type='checkbox' id='consent' name='consent' value='consent' required/>
         <label htmlFor='consent' className={'Consent'}>
             {strings.consent}
             <a className={'PrivacyPolicy'}
@@ -232,7 +240,6 @@ const Consent = () => {
         </label>
     </div>
 };
-
 
 
 export default SignUp;
