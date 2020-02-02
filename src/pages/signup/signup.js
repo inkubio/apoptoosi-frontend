@@ -61,21 +61,7 @@ const SignUp = () => {
 
     function renderSwitch() {
         switch (subPage) {
-            case 0 :
-                return <form onSubmit={handleSubmit}>
-                    <Name firstName={inputs.firstName} lastName={inputs.lastName}
-                          handleInputChange={handleInputChange}/>
-                    <Email email={inputs.email} handleInputChange={handleInputChange}/>
-                    <Diet diet={inputs.diet} handleInputChange={handleInputChange}/>
-                    <AlcoholStatus alcohol={inputs.alcohol} handleInputChange={handleInputChange}/>
-                    <TableGroup tableGroup={inputs.tableGroup} handleInputChange={handleInputChange}/>
-                    <Avec avec={inputs.avec} handleInputChange={handleInputChange}/>
-                    <GiftStatus gift={inputs.gift} handleInputChange={handleInputChange}/>
-                    <AlumniStatus alumni={inputs.alumni} handleInputChange={handleInputChange}/>
-                    <Organisation organisation={inputs.organisation} handleInputChange={handleInputChange}/>
-                    <Consent/>
-                    <button className={'Button'} type='submit'>{strings.signUp}</button>
-                </form>;
+            case 0:
             case 1:
                 return <form onSubmit={handleSubmit}>
                     <Name firstName={inputs.firstName} lastName={inputs.lastName}
@@ -88,6 +74,7 @@ const SignUp = () => {
                     <GiftStatus gift={inputs.gift} handleInputChange={handleInputChange}/>
                     <AlumniStatus alumni={inputs.alumni} handleInputChange={handleInputChange}/>
                     <Organisation organisation={inputs.organisation} handleInputChange={handleInputChange}/>
+                    <SillisStatus sillis={inputs.sillis} handleInputChange={handleInputChange}/>
                     <Consent/>
                     <button className={'Button'} type='submit'>{strings.signUp}</button>
                 </form>;
@@ -203,6 +190,14 @@ const AlumniStatus = ({alumni, handleInputChange}) => {
         label={strings.formFields.alumni}
         name={'alumni'}
         input={alumni}
+        handleInputChange={handleInputChange}
+    />
+};
+const SillisStatus = ({sillis, handleInputChange}) => {
+    return <YesNoRadio
+        label={strings.formFields.sillis}
+        name={'sillis'}
+        input={sillis}
         handleInputChange={handleInputChange}
     />
 };

@@ -13,6 +13,7 @@ const useSignUpForm = (callback) => {
         gift: "",
         invited: true,
         alumni: "",
+        sillis: "",
     });
 
     const handleSubmit = (event) => {

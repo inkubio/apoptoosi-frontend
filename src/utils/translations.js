@@ -32,6 +32,7 @@ const strings = new LocalizedStrings({
             alumni: "Olen alumni",
             invited: "Olen kutsuvieras",
             organisation: "Edustamani taho",
+            sillis: "Sillis",
         },
         timetable: "Aikataulu",
         eventsList:   [
@@ -109,6 +110,7 @@ const strings = new LocalizedStrings({
             alumni: "I am an alumni",
             invited: "I am invited guest",
             organisation: "Represented Organisation",
+            sillis: "Sillis",
         },
         timetable: "Timetable",
         eventsList:   [
