@@ -10,6 +10,7 @@ const strings = new LocalizedStrings({
         hours: "tuntia",
         minutes: "minuuttia",
         seconds: "sekuntia",
+        timetable: "Aikataulu",
         eventsList:   [
             {
                 title: "Otsikko",
@@ -25,7 +26,33 @@ const strings = new LocalizedStrings({
                 link: "http://www.example.com",
                 linkText: "Facebook tapahtuma"
             }
-        ]
+        ],
+        mainEvent: {
+            title: "Apoptoosi XVI",
+            description: "Lorem ipsum",
+            cocktailParty: {
+                title: "Cocktail tilaisuus",
+                when: "Klo 15:00",
+                where: "Jossain"
+            },
+            mainParty: {
+                title: "Pääjuhla",
+                when: "Klo 18:00",
+                where: "Toisessa paikassa"
+            },
+            afterparty: {
+                title: "Jatkot",
+                when: "Klo 24:00",
+                where: "Paikka X",
+            },
+            sillis: {
+                title: "Sillis",
+                when: "8.3. Klo 12:00",
+                where: "Paikka Y",
+            }
+        },
+
+
     },
     en:{
         home: "Home",
@@ -36,22 +63,31 @@ const strings = new LocalizedStrings({
         hours: "hours",
         minutes: "minutes",
         seconds: "seconds",
-        eventsList:   [
-            {
-                title: "title",
-                date: "date",
-                content: "content",
-                link: "http://www.example.com",
-                linkText: "Facebook event"
+        timetable: "Timetable",
+        mainEvent: {
+            title: "Apoptoosi XVI",
+            description: "Lorem ipsum",
+            cocktailParty: {
+                title: "Cocktail party",
+                when: "At 15:00",
+                where: "Somewhere"
             },
-            {
-                title: "title2",
-                date: "date2",
-                content: "content2",
-                link: "http://www.example.com",
-                linkText: "Facebook event 2"
+            mainParty: {
+                title: "Main party",
+                when: "At 18:00",
+                where: "Somewhere else"
+            },
+            afterparty: {
+                title: "Afterparty",
+                when: "At 24:00",
+                where: "Place X",
+            },
+            sillis: {
+                title: "Sillis",
+                when: "8.3. At 12:00",
+                where: "Place Y",
             }
-        ]
+        },
     }
 });
 

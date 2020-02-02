@@ -1,9 +1,9 @@
 import React from 'react';
-import CountDownTimer from "../../utils/countdownTimer";
-import "./home.css"
-
 import PropTypes from 'prop-types';
-import Event from "../../components/event/event";
+import CountDownTimer from "../../utils/countdownTimer";
+import strings from "../../utils/translations";
+
+import "./home.css"
 
 const Home = ({date, className}) => {
     return <div className={"Container"}>
@@ -15,45 +15,28 @@ const Home = ({date, className}) => {
                 <Item className={"Item-4"}/>
             </div>
             <div className={"TitleCard"}>
-                <h1 className={"Title"}>Apoptoosi XVI</h1>
+                <h1 className={"Title"}>{strings.mainEvent.title}</h1>
                 <p className={"Date"}>{date.toLocaleString()}</p>
                 <CountDownTimer className={"Timer " + className} date={date}/>
             </div>
         </div>
-        <h2 className={"Heading"}>Juhlapäivä</h2>
-        <div className={"Description"}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-            occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-            occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        </div>
-        <h2 className={"Heading"}>
-            Aikataulu
-        </h2>
+        <h2 className={"Heading"}>{strings.mainEvent.title}</h2>
+        <div className={"Description"}>{strings.mainEvent.description}</div>
+        <h2 className={"Heading"}>{strings.timetable}</h2>
         <div className={"Timetable"}>
-            <p>Cocktail tilaisuus</p>
-            <p>Klo 15.00</p>
-            <p>Jossain</p>
-            <p>Pääjuhla</p>
-            <p>Klo 18.00</p>
-            <p>Jossain muualla</p>
-            <p>Jatkot</p>
-            <p>Klo 24.00</p>
-            <p>Paikka X</p>
-            <p>Sillis</p>
-            <p> 8.3. Klo 12.00</p>
-            <p>Paikka Y</p>
+            <p>{strings.mainEvent.cocktailParty.title}</p>
+            <p>{strings.mainEvent.cocktailParty.when}</p>
+            <p>{strings.mainEvent.cocktailParty.where}</p>
+            <p>{strings.mainEvent.mainParty.title}</p>
+            <p>{strings.mainEvent.mainParty.when}</p>
+            <p>{strings.mainEvent.mainParty.where}</p>
+            <p>{strings.mainEvent.afterparty.title}</p>
+            <p>{strings.mainEvent.afterparty.when}</p>
+            <p>{strings.mainEvent.afterparty.where}</p>
+            <p>{strings.mainEvent.sillis.title}</p>
+            <p>{strings.mainEvent.sillis.when}</p>
+            <p>{strings.mainEvent.sillis.where}</p>
         </div>
-
     </div>
 };
 
