@@ -5,9 +5,7 @@ import './inputField.css';
 
 const InputField = ({className, type, required, name, placeholder, value, onChange, inputClass, children}) => {
     return <div className={className}>
-        {required ?
-            <label className={"required"}>{children}</label> :
-            <label>{children}</label>}
+        <label className={required ? "required" : ''}>{children}</label> :
         <input
             className={inputClass}
             type={type}
