@@ -3,9 +3,9 @@ import strings from '../../utils/translations';
 
 import './YesNoRadio.css'
 
-const YesNoRadio = ({label, name, input, handleInputChange}) => {
+const YesNoRadio = ({label, name, input, handleInputChange, required}) => {
     return <div className={"RadioSelect"}>
-        <label className={"required"}>{label}</label>
+        <label className={required ? "required" : ''}>{label}</label>
         <div className={"radioOption"}>
             <input
                 className={"radioInput"}
@@ -14,7 +14,7 @@ const YesNoRadio = ({label, name, input, handleInputChange}) => {
                 value="yes"
                 checked={input === "yes"}
                 onChange={handleInputChange}
-                required
+                required={required}
             />
             <label>{strings.yes}</label>
         </div>
