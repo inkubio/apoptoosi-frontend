@@ -13,7 +13,7 @@
 
 # production
 /build
-
+*/env.json
 # misc
 .DS_Store
 .env.local
