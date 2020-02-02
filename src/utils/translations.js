@@ -10,7 +10,22 @@ const strings = new LocalizedStrings({
         hours: "tuntia",
         minutes: "minuuttia",
         seconds: "sekuntia",
-        eventTitle1: "Virpin läpilaulu",
+        eventsList:   [
+            {
+                title: "Otsikko",
+                date: "Päivämäärä",
+                content: "sisältö",
+                link: "http://www.example.com",
+                linkText: "Facebook tapahtuma"
+            },
+            {
+                title: "Toinen otsikko",
+                date: "03/04",
+                content: "jotain kivaa",
+                link: "http://www.example.com",
+                linkText: "Facebook tapahtuma"
+            }
+        ]
     },
     en:{
         home: "Home",
@@ -21,7 +36,22 @@ const strings = new LocalizedStrings({
         hours: "hours",
         minutes: "minutes",
         seconds: "seconds",
-        eventTitle1: "Virpi singthrought",
+        eventsList:   [
+            {
+                title: "title",
+                date: "date",
+                content: "content",
+                link: "http://www.example.com",
+                linkText: "Facebook event"
+            },
+            {
+                title: "title2",
+                date: "date2",
+                content: "content2",
+                link: "http://www.example.com",
+                linkText: "Facebook event 2"
+            }
+        ]
     }
 });
 
