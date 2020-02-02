@@ -64,6 +64,22 @@ const strings = new LocalizedStrings({
         minutes: "minutes",
         seconds: "seconds",
         timetable: "Timetable",
+        eventsList:   [
+            {
+                title: "title1",
+                date: "03/03",
+                content: "content",
+                link: "http://www.example.com",
+                linkText: "Facebook Event"
+            },
+            {
+                title: "title2",
+                date: "03/04",
+                content: "something nice",
+                link: "http://www.example.com",
+                linkText: "Facebook Event"
+            }
+        ],
         mainEvent: {
             title: "Apoptoosi XVI",
             description: "Lorem ipsum",
