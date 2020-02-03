@@ -16,7 +16,6 @@ const Events = () => {
       {item.content}
     </Event>
   );
-  console.log(events);
   return <div className={"Base"}>
     <div className={"Events"}>
         {events}

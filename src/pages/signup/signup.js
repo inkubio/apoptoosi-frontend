@@ -25,14 +25,11 @@ const SignUp = () => {
 
     useEffect(() => {
         const enableSignUp = new EventSource(env.api + '/signup/enable');
-        console.log("Connected");
         enableSignUp.onmessage = (e) => {
             let d = JSON.parse(e.data);
             setEnableSignUp(enableSignUp => ({...enableSignUp, ...d}));
-            console.log(e);
         };
         return function cleanup() {
-            console.log("Connection closed");
             enableSignUp.close();
         }
     }, []);
