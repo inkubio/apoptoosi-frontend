@@ -1,0 +1,34 @@
+{
+  "fi" : [
+    {
+      "title": "Otsikko",
+      "date": "Päivämäärä",
+      "content": "sisältö",
+      "link": "http://www.example.com",
+      "linkText": "Facebook tapahtuma"
+    },
+    {
+      "title": "Toinen otsikko",
+      "date": "03/04",
+      "content": "jotain kivaa",
+      "link": "http://www.example.com",
+      "linkText": "Facebook tapahtuma"
+    }
+  ],
+  "en": [
+    {
+      "title": "title1",
+      "date": "03/03",
+      "content": "content",
+      "link": "http://www.example.com",
+      "linkText": "Facebook Event"
+    },
+    {
+      "title": "title2",
+      "date": "03/04",
+      "content": "something nice",
+      "link": "http://www.example.com",
+      "linkText": "Facebook Event"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {Route, Redirect} from "react-router-dom";
+import {Redirect} from "react-router-dom";
 import './signup.css';
 import useSignUpForm from './signUpHook';
 import InputField from '../../components/inputField/inputField';

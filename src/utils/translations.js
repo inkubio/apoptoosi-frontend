@@ -1,5 +1,8 @@
 import LocalizedStrings from 'react-localization';
 
+import events from '../data/events';
+import mainEvents from '../data/mainEvents';
+
 const strings = new LocalizedStrings({
     fi:{
         home: "Etusivu",
@@ -35,46 +38,8 @@ const strings = new LocalizedStrings({
             sillis: "Sillis",
         },
         timetable: "Aikataulu",
-        eventsList:   [
-            {
-                title: "Otsikko",
-                date: "Päivämäärä",
-                content: "sisältö",
-                link: "http://www.example.com",
-                linkText: "Facebook tapahtuma"
-            },
-            {
-                title: "Toinen otsikko",
-                date: "03/04",
-                content: "jotain kivaa",
-                link: "http://www.example.com",
-                linkText: "Facebook tapahtuma"
-            }
-        ],
-        mainEvent: {
-            title: "Apoptoosi XVI",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            cocktailParty: {
-                title: "Cocktail tilaisuus",
-                when: "Klo 15:00",
-                where: "Jossain"
-            },
-            mainParty: {
-                title: "Pääjuhla",
-                when: "Klo 18:00",
-                where: "Toisessa paikassa"
-            },
-            afterparty: {
-                title: "Jatkot",
-                when: "Klo 24:00",
-                where: "Paikka X",
-            },
-            sillis: {
-                title: "Sillis",
-                when: "8.3. Klo 12:00",
-                where: "Paikka Y",
-            }
-        },
+        eventsList:   events.fi,
+        mainEvent: mainEvents.fi,
         successInfo: "Kiitos ilmoittautumisesta. Sinulle on lähetetty vahvistusviesti antamaasi sähköpostiosoitteeseen"
 
 
@@ -113,46 +78,8 @@ const strings = new LocalizedStrings({
             sillis: "Sillis",
         },
         timetable: "Timetable",
-        eventsList:   [
-            {
-                title: "title1",
-                date: "03/03",
-                content: "content",
-                link: "http://www.example.com",
-                linkText: "Facebook Event"
-            },
-            {
-                title: "title2",
-                date: "03/04",
-                content: "something nice",
-                link: "http://www.example.com",
-                linkText: "Facebook Event"
-            }
-        ],
-        mainEvent: {
-            title: "Apoptoosi XVI",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            cocktailParty: {
-                title: "Cocktail party",
-                when: "At 15:00",
-                where: "Somewhere"
-            },
-            mainParty: {
-                title: "Main party",
-                when: "At 18:00",
-                where: "Somewhere else"
-            },
-            afterparty: {
-                title: "Afterparty",
-                when: "At 24:00",
-                where: "Place X",
-            },
-            sillis: {
-                title: "Sillis",
-                when: "8.3. At 12:00",
-                where: "Place Y",
-            }
-        },
+        eventsList: events.en,
+        mainEvent: mainEvents.en,
         successInfo: "Thank you for signing up. Confirmation email have been send to given email address"
     }
 });

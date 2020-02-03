@@ -1,8 +1,7 @@
-import React, {useState} from 'react';
+import React from 'react';
 import strings from '../../utils/translations';
 
 import './success.css';
-import {Link} from 'react-router-dom';
 
 const Success = (props)=> {
 
