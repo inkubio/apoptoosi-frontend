@@ -16,7 +16,7 @@ import './App.css';
 
 
 const  App = () => {
-    let date = new Date(2020, 2, 7, 21, 0, 0, 0);
+    let date = new Date(2020, 2, 7, 15, 0, 0, 0);
     const [lang,setLang] = useState('fi');
     strings.setLanguage(lang);
     return (
