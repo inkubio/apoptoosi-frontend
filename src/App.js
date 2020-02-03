@@ -20,7 +20,7 @@ const  App = () => {
     const [lang,setLang] = useState('fi');
     strings.setLanguage(lang);
     return (
-        <Router>
+        <Router basename={'/apoptoosi'}>
             <div className="App">
                 <Navigation setLang={setLang}/>
                 <div className={"MainContainer"}>
