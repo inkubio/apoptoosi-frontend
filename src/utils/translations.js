@@ -22,7 +22,14 @@ const strings = new LocalizedStrings({
         other: "Muut vieraat",
         consent: "Hyväksyn",
         privacyPolicy: "tietosuojaselosteen",
-        signUpInfo: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        signUpInfo: "Ilmoittautuminen kutsuvieraille aukeaa 5.2.2020 klo 12:00\n" +
+            "Ilmoittautuminen kiltalaisille aukeaa 10.2.2020 klo 12:00\n" +
+            "Ilmoittautuminen sulkeutuu 21.2.2020 23:59\n" +
+            "Vuosijuhlille on 150 paikkaa.\n" +
+            "\n" +
+            "Vuosijuhla on iltapukujuhla, jossa asuna on frakki tai pitkä iltapuku. Juhlapukua koristaa lisäksi akateemiset kunniamerkit.\n" +
+            "\n" +
+            "Illalliskortti maksaa opiskelijalle 80 euroa ja valmistuneelle 95 euroa. Silliaamiainen kustantaa 15 euroa.",
         formFields: {
             firstName: "Etunimi",
             lastName: "Sukunimi",
@@ -62,7 +69,14 @@ const strings = new LocalizedStrings({
         other: "Other Guests",
         consent: "I agree to",
         privacyPolicy: "Privacy Policy",
-        signUpInfo: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        signUpInfo: "For invited guests: 5.2.2020 at 12.00\n" +
+            "For guild members: 10.2.2020 at 12.00\n" +
+            "Registration ends 21.2.2020 at 23.59\n" +
+            "There is 150 places to the annual ball.\n" +
+            "\n" +
+            "The annual ball is a white tie event, so the dresscode is a dark suit or an evening dress. In addition the academic honours are included in the dresscode.\n" +
+            "\n" +
+            "The annual ball costs 80 euros for students and 95 euros for alumni. The herring brunch costs 15 euros.\n",
         formFields: {
             firstName: "First Name",
             lastName: "Last Name",

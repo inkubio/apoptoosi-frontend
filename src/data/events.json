@@ -1,32 +1,46 @@
 {
   "fi" : [
     {
-      "title": "Otsikko",
-      "date": "Päivämäärä",
-      "content": "sisältö",
+      "title": "Virpin läpilaulanta",
+      "date": "4.3. Ossinkulma",
+      "content": "",
       "link": "http://www.example.com",
       "linkText": "Facebook tapahtuma"
     },
     {
-      "title": "Toinen otsikko",
-      "date": "03/04",
-      "content": "jotain kivaa",
+      "title": "Talvi kroketti",
+      "date": "5.3. 15.00 Alvarin Aukio",
+      "content": "Onko sinulla jo palava ikävä kesän hauskinta ulkopeliä? Kaipaisitko varaslähtöä vuosijuhlien hauskanpitoon? Tule valloittamaan elementit Apoptoosi XVI talvikrokettiin! Tässä krokettispektaakkelissa on tarjolla vaikeaa maastoa, hyppyreitä, tulirenkaita ja paljon muuta. Kokoa siis neljän (4) hengen joukkueesi ja tule haastamaan muut joukkueet tämän talven huikempaan krokettiturnaukseen torstaina 5.2. klo 15 Alvarin Aukiolle! Illalla on myös saunamahdollisuus Gorsulla 18:30 eteenpäin.",
+      "link": "http://www.example.com",
+      "linkText": "Facebook tapahtuma"
+    },
+    {
+      "title": "Tapa- ja tanssikoulutus perjantaina",
+      "date": "6.3. klo 18.00 Tatamisalissa",
+      "content":  "Mietityttääkö vuosijuhlien yleiset käytöstavat? Onko viime tansseista kulunut jo vuosia? Ei hätää sillä Inkubion vuosijuhlaviikon perjantaina perehdytään vuosijuhlien etikettiin, sekä palautellaan muistiin juhlatanssien askeleet rennossa ympäristössä.\n\nTervetulleita mukaan ovat niin Apoptoosi XVI:n juhlavieraat, kuin muutkin aiheesta kiinnostuneet.\n",
       "link": "http://www.example.com",
       "linkText": "Facebook tapahtuma"
     }
   ],
   "en": [
     {
-      "title": "title1",
-      "date": "03/03",
-      "content": "content",
+      "title": "Virpin läpilaulanta",
+      "date": "4.3. Ossinkulma",
+      "content": "",
       "link": "http://www.example.com",
       "linkText": "Facebook Event"
     },
     {
-      "title": "title2",
-      "date": "03/04",
-      "content": "something nice",
+      "title": "Winter croquet",
+      "date": "5.3. 15.00 at Alvarin Aukio",
+      "content": "Do you already miss the funnest outdoor game of the summer? Are you longing for a head start to the fun of the annual ball? Come conquer the elements to the Apoptoosi XVI winter croquet! This croque spectacle offers difficult terrain, ramps, rings of fire and a lot more. Assemble your team of four (4) players and come challenge the other teams to this winter’s best croque tournament on Thursday 5.2. at 15.00 at Alvarin Aukio! There is also a sauna warm at Gorsu from 18.30 onwards.",
+      "link": "http://www.example.com",
+      "linkText": "Facebook Event"
+    },
+    {
+      "title": "Dance- and mannor training",
+      "date": "6.3. 18.00 at Tatamisali",
+      "content": "Are the manners of an annual ball confusing you? Has it been years since your last dance? Not to worry, for the friday of Inkubio’s annual ball week there will be a familiarization to proper etiquette and to ballroom dances.\n\nWe welcome the guests of Apoptoosi XVI as well as others interested.\n",
       "link": "http://www.example.com",
       "linkText": "Facebook Event"
     }

@@ -87,7 +87,7 @@
 }
 
 .Description {
-    /*font-family: "Libre Baskerville",Baskerville, Times, serif;*/
+    white-space: pre-wrap;
     text-align: center;
     font-size: 1.2em;
     margin: auto;

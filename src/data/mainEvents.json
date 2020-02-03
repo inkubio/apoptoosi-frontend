@@ -1,16 +1,16 @@
 {
   "en": {
     "title": "Apoptoosi XVI",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "description": "What does the universe consist of? This metaphysical question has mystified ancient philosophers from the beginning of time. Ancient Greeks believed all substances to be constructed of four elements: earth, water, air and fire. Although we nowadays know a bit more about the composition of materia, we believe that these elements will construct an amazing annual ball.\n\nWe welcome you to celebrate the 16th annual ball of Aalto university’s bioinformationtechnology students’ guild Inkubio ry! Each section of the celebration has been paired with an element. You can experience the structure of the universe by participating in all of them! In this event each guest will be in their element for sure!\n\nThe celebration will begin with an Earth-themed cocktail event, which is held in the Väre lounge starting at 15.00. After the service and the gift reception we will proceed to the main event via organized transportation. The Air-themed main event will begin at 18.30 in Ravintola Keilalahti in the address Keilaranta 5, Espoo. So that the mood remains high, shortly after the main event we will continue to the blazing hot Fire-themed afterparty in place X.\n\nThe annual ball is a white tie event, so the dresscode is a dark suit or an evening dress. In addition the academic honours are included in the dresscode.\n\nSo the balance of the elements’ is not shaken, a Water-themed herring brunch Nekroosi is held on Sunday 8.2. beginning at 12.00 in Otakaari 20.\n",
     "cocktailParty": {
       "title": "Cocktail party",
       "when": "At 15:00",
-      "where": "Somewhere"
+      "where": "Väreen aula"
     },
     "mainParty": {
       "title": "Main party",
       "when": "At 18:00",
-      "where": "Somewhere else"
+      "where": "Ravintola Keilalahti"
     },
     "afterparty": {
       "title": "Afterparty",
@@ -25,16 +25,16 @@
   },
   "fi": {
     "title": "Apoptoosi XVI",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "description": "Mistä maailmankaikkeus rakentuu? Tämä metafyysinen kysymys on ollut filosofien huulilla jo antiikin ajoista saakka. Kreikkalaiset filosofit uskoivat kaiken aineen koostuvan neljästä elementistä: maasta, vedestä, ilmasta ja tulesta. Vaikka nykypäivänä tiedämme aineen rakenteesta hieman enemmän, uskomme että näistä elementeistä rakentuu uskomattomat vuosijuhlat!\n\nTervetuloa juhlimaan yhdessä 16-vuotista Aalto-yliopiston bioinformaatioteknologian opiskelijoiden kiltaa, Inkubiota! Jokainen juhlan osa-alue on saanut parikseen yhden elementin. Voit kokea kaikkeuden rakenteen osallistumalla niistä jokaiseen! Näissä juhlissa jokainen vierailija pääsee varmasti elementtiinsä!\n\nJuhlat alkavat Maa-teemaisella cocktailtilaisuudella, joka pidetään Väreen aulassa klo 15 alkaen. Tarjoilujen ja lahjojenannon jälkeen siirrytään yhteiskuljetuksella pääjuhlapaikalle.\nIlma-teemaista pääjuhlaa vietetään klo 18.30 alkaen Ravintola Keilalahdessa osoitteessa Keilaranta 5, Espoo. Jotta tunnelma ei laskisi yläilmoista, siirrytään pääjuhlan jälkeen yhteiskuljetuksella kuumempiakin kuumemmille Tuli-teemaisille jatkoille, jotka pidetään paikassa X.\n\nVuosijuhla on iltapukujuhla, jossa asuna on frakki tai pitkä iltapuku. Juhlapukua koristaa lisäksi akateemiset kunniamerkit.\n\nJotta elementtien tasapaino ei järkkyisi, vietetään sunnuntaina 8.3.2020 Märkä-silliaamiaista Nekroosia. Sillis pidetään Otakaari 20:ssä klo 12 eteenpäin.",
     "cocktailParty": {
       "title": "Cocktail tilaisuus",
       "when": "Klo 15:00",
-      "where": "Jossain"
+      "where": "Väre Lounge"
     },
     "mainParty": {
       "title": "Pääjuhla",
       "when": "Klo 18:00",
-      "where": "Toisessa paikassa"
+      "where": "Ravintola Keilalahti"
     },
     "afterparty": {
       "title": "Jatkot",

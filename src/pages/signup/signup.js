@@ -147,7 +147,7 @@ const Name = ({firstName, lastName, handleInputChange}) => {
                     name={'firstName'}
                     maxLength={50}
                     onChange={handleInputChange}
-                    placeholder={'Matti'}
+                    placeholder={"Teemu"}
                     value={firstName}
         >{strings.formFields.firstName} ({strings.public})</InputField>
         <InputField required={true}
@@ -157,7 +157,7 @@ const Name = ({firstName, lastName, handleInputChange}) => {
                     name={'lastName'}
                     maxLength={50}
                     onChange={handleInputChange}
-                    placeholder={'Meikäläinen'}
+                    placeholder={"Teekkari"}
                     value={lastName}
         >{strings.formFields.lastName} ({strings.public})</InputField>
     </div>
@@ -168,8 +168,8 @@ const Email = ({email, handleInputChange}) => {
                        type={'email'}
                        name={'email'}
                        maxLength={255}
+                       placeholder={"teemu.teekkari@aalto.fi"}
                        onChange={handleInputChange}
-                       placeholder={'matti.meikalainen@aalto.fi'}
                        value={email}
     >{strings.formFields.email}</InputField>
 };
@@ -179,7 +179,6 @@ const Diet = ({diet, handleInputChange}) => {
         type={'text'}
         name={'diet'}
         onChange={handleInputChange}
-        placeholder={'diet'}
         value={diet}
     >{strings.formFields.diet}</InputField>
 };
@@ -223,7 +222,7 @@ const TableGroup = ({tableGroup, handleInputChange}) => {
         type={'text'}
         name={'tableGroup'}
         onChange={handleInputChange}
-        placeholder={'Matti ja Teppo'}
+        placeholder={"Teekkarit"}
         value={tableGroup}
     >{strings.formFields.tableGroup} ({strings.public})</InputField>
 };
@@ -233,7 +232,6 @@ const Avec = ({avec, handleInputChange}) => {
         type={'text'}
         name={'avec'}
         onChange={handleInputChange}
-        placeholder={'Joku'}
         value={avec}
     >{strings.formFields.avec}</InputField>
 };
@@ -243,7 +241,6 @@ const Organisation = ({organisation, handleInputChange}) => {
         name={'organisation'}
         maxLength={255}
         onChange={handleInputChange}
-        placeholder={'Joku'}
         value={organisation}
     >{strings.formFields.organisation}</InputField>
 };
