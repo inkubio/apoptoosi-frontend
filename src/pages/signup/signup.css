@@ -34,6 +34,10 @@
 .Button:focus {
     outline: none;
 }
+.Button:disabled {
+    border-color: #7d7d7d;
+    color: #7d7d7d;
+}
 .Button-selected {
     border-color: lightblue;
 }

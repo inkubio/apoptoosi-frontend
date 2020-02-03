@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {Route, Redirect} from "react-router-dom";
 import './signup.css';
 import useSignUpForm from './signUpHook';
@@ -18,11 +18,30 @@ const SignUp = () => {
         usedSpots: 0,
     });
     const [isSuccess, setSuccess] = useState(false);
+    const [enableSignUp, setEnableSignUp] = useState({
+        guest: false,
+        others: false
+    });
+
+    useEffect(() => {
+        const enableSignUp = new EventSource(env.api + '/signup/enable');
+        console.log("Connected");
+        enableSignUp.onmessage = (e) => {
+            let d = JSON.parse(e.data);
+            setEnableSignUp(enableSignUp => ({...enableSignUp, ...d}));
+            console.log(e);
+        };
+        return function cleanup() {
+            console.log("Connection closed");
+            enableSignUp.close();
+        }
+    }, []);
 
     function submit() {
         if (subPage === 0) {
             inputs.invited = true;
         }
+        inputs.language = strings.getLanguage();
         fetch(env.api + '/signup', {
             method: 'POST',
             headers: {
@@ -107,9 +126,9 @@ const SignUp = () => {
         }} /> : null}
         <p className={'Info'}>{strings.signUpInfo}</p>
         <div>
-            <button className={'Button' + (subPage === 0 ? ' Button-selected' : '')}
+            <button disabled={!enableSignUp.guest} className={'Button' + (subPage === 0 ? ' Button-selected' : '')}
                     onClick={() => setSubPage(0)}>{strings.guests}</button>
-            <button className={'Button' + (subPage === 1 ? ' Button-selected' : '')}
+            <button disabled={!enableSignUp.others} className={'Button' + (subPage === 1 ? ' Button-selected' : '')}
                     onClick={() => setSubPage(1)}>{strings.other}</button>
             <button className={'Button' + (subPage === 2 ? ' Button-selected' : '')} onClick={() => {
                 fetchParticipants();
