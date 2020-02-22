@@ -11,7 +11,7 @@ const useSignUpForm = (callback) => {
         avec: "",
         organisation: "",
         gift: "",
-        invited: true,
+        invited: false,
         alumni: "",
         sillis: "",
     });
